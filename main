@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic Conch Button</title>
+  <style>
+    .conch-button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: coral;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function getRandomResponse() {
+      var responses = [
+        "Yes",
+        "No",
+        "Try Again Later",
+        "NoOoOo",
+        "Maybe someday"
+      ];
+      var randomIndex = Math.floor(Math.random() * responses.length);
+      return responses[randomIndex];
+    }
+
+    function showRandomResponse() {
+      var responseDisplay = document.getElementById("response-display");
+      responseDisplay.innerHTML = getRandomResponse();
+    }
+  </script>
+</head>
+<body>
+  <h1>Magic Conch Button</h1>
+  <button class="conch-button" onclick="showRandomResponse()">Ask the Magic Conch!</button>
+  <p id="response-display"></p>
+</body>
+</html>
